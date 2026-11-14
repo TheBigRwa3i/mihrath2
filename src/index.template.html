@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183e33">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%23183e33%27/%3E%3Cpath d=%27M16 26V11m0 7C7 18 7 8 7 8c9 0 9 10 9 10Zm0-4s0-9 10-9c0 0 0 9-10 9Z%27 fill=%27%23d9e9a6%27/%3E%3C/svg%3E">
+  <meta name="description" content="درع المزارع: مخطط عربي للدورة الزراعية والمياه ومخاطر المناخ في الأردن، مع بيانات NASA POWER وتوقعات Open-Meteo.">
+  <title>درع المزارع — Farmer’s Shield: مخطط الدورة الزراعية والمناخ الذكي</title>
+  <!-- Tailwind CSS 2.2.19 (MIT), locally embedded utilities; no runtime/CDN dependency. -->
+  <style id="tailwind">/*__TAILWIND__*/</style>
+  <style>
+/*__FONT__*/
+/*__APP_CSS__*/  </style>
+</head>
+<body>
+<a href="#main" class="skip">انتقل للمحتوى</a>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2 3.5 5v6c0 5.5 8.5 10.5 8.5 10.5s8.5-5 8.5-10.5V5z"/><path d="M12 16V8m0 5c-4 0-5-3-5-3 4-1 5 3 5 3Zm0-2s0-4 5-4c0 0-1 4-5 4Z"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 20c2-9 8-10 13-15M5 16C-1 7 9 3 21 3c0 13-8 18-16 13Z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2S5 10 5 15a7 7 0 0 0 14 0C19 10 12 2 12 2Z"/><path d="M9 15a3 3 0 0 0 3 3"/></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+<symbol id="i-mountain" viewBox="0 0 24 24"><path d="m2 20 8-15 5 9 3-5 5 11H2Zm5-9 3 2 2-2M3 20h19"/><circle cx="18" cy="4" r="2"/></symbol>
+<symbol id="i-field" viewBox="0 0 24 24"><path d="M2 14c6-5 14-5 20 0M2 19c6-5 14-5 20 0M4 22c5-3 11-3 16 0M2 10h20M12 3v4M6 4l2 2m10-2-2 2"/></symbol>
+<symbol id="i-wheat" viewBox="0 0 24 24"><path d="M12 22V4m0 5c-5 0-5-5-5-5 5 0 5 5 5 5Zm0 5c-5 0-5-5-5-5 5 0 5 5 5 5Zm0 5c-5 0-5-5-5-5 5 0 5 5 5 5Zm0-10c5 0 5-5 5-5-5 0-5 5-5 5Zm0 5c5 0 5-5 5-5-5 0-5 5-5 5Zm0 5c5 0 5-5 5-5-5 0-5 5-5 5Z"/></symbol>
+<symbol id="i-wind" viewBox="0 0 24 24"><path d="M2 7h13c5 0 5-6 1-6-2 0-3 2-3 3M2 12h17c4 0 4 6 0 6-2 0-3-2-3-3M2 17h6c5 0 5 6 1 6"/></symbol>
+<symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 2v20M3.5 7l17 10m-17 0 17-10M9 3l3 3 3-3M9 21l3-3 3 3M3 10l4-1-1-4m12 14-1-4 4-1M3 14l4 1-1 4m12-14-1 4 4 1"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/></symbol>
+<symbol id="i-print" viewBox="0 0 24 24"><path d="M6 8V3h12v5M6 17H3V9h18v8h-3M6 14h12v7H6zM17 11h1"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 16-1 5 5-1L21 7l-4-4L4 16Zm10-10 4 4M4 16l4 4"/></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M6 17a5 5 0 0 1-1-10 7 7 0 0 1 13-1 5.5 5.5 0 0 1 0 11H6Zm2 3-1 2m6-2-1 2m6-2-1 2"/></symbol>
+<symbol id="i-fire" viewBox="0 0 24 24"><path d="M13 2c1 7-5 7-3 12 0 0 3-1 4-4 7 6 4 12-3 12C2 22 2 14 6 9c0 3 1 4 1 4S6 7 13 2Z"/></symbol>
+<symbol id="i-satellite" viewBox="0 0 24 24"><path d="m9 9 6 6 4-4-6-6-4 4ZM4 3l5 5-3 3-5-5 3-3Zm12 13 5 5 3-3-5-5-3 3ZM2 16a6 6 0 0 1 6 6m-6-10a10 10 0 0 1 10 10m0-10-4 4"/></symbol>
+</defs></svg>
+<div class="status-bar" role="status" aria-live="polite" aria-atomic="true"><div class="wrap status-inner">
+  <span class="source-state"><i id="nasaDot" class="dot"></i><span dir="ltr">NASA POWER</span><span>مناخ وتربة</span><span id="nasaStatus">نسخة احتياطية</span></span>
+  <span class="source-state"><i id="forecastDot" class="dot"></i><span dir="ltr">Open-Meteo · 7 Days</span><span id="forecastStatus">سيناريو تجريبي</span></span>
+  <span id="coordinates" class="status-coords">32.3429° N, 36.2080° E</span>
+  <span class="status-ref">مراجع: FAO GAEZ · SMAP · MODIS / ECOSTRESS · ERA5</span>
+</div></div>
+<div class="wrap">
+<header class="topnav">
+  <a class="brand" href="#main"><span class="brand-icon"><svg class="icon"><use href="#i-shield"/></svg></span><div><div class="brand-name">درع المزارع</div><div class="brand-sub" lang="en">FARMER’S SHIELD</div></div></a>
+  <nav class="nav-links" aria-label="التنقل الرئيسي"><a href="#main" id="navPlanner">مخطط الموسم</a><a href="#aboutMethod" id="navScience">كيف نحسب؟</a><span class="challenge"><svg class="icon" style="width:16px;height:16px"><use href="#i-satellite"/></svg><span lang="en" dir="ltr">NASA SPACE APPS</span></span></nav>
+</header>
+<main id="main">
+<section class="hero" id="intro">
+  <div><span class="eyebrow">من الفضاء… لخير أرضك</span><h1>موسم أذكى.<br><em>وأرض بخير.</em></h1><p>خطّط دورتك الزراعية على قدّ مياهك. قارن محاصيلك، افهم مناخ منطقتك، وخذ قرار الموسم القادم بوضوح.</p><div class="hero-tags"><span><svg class="icon"><use href="#i-check"/></svg>بيانات NASA للمناخ والتربة</span><span><svg class="icon"><use href="#i-check"/></svg>مصمّم للمزارع الأردني</span></div></div>
+  <div class="landscape" aria-hidden="true"><span class="land-coordinate">JORDAN / 31°–33° N</span><svg viewBox="0 0 520 285" preserveAspectRatio="xMidYMid slice"><defs><clipPath id="landClip"><rect width="520" height="285" rx="24"/></clipPath></defs><g clip-path="url(#landClip)"><rect width="520" height="285" fill="#e9ebd9"/><circle cx="125" cy="89" r="33" fill="#d4ba72"/><path d="M0 150Q90 110 190 146T380 125T550 155V300H0" fill="#c0cbae"/><path d="M0 193Q150 110 310 175T550 156V300H0" fill="#92a783"/><path d="M-20 220Q120 148 275 210T550 205V300H-20" fill="#54745b"/><path d="M300 160Q220 205 180 300H285Q300 219 350 171" fill="#c0b08a"/><path d="M0 242Q84 187 240 215M0 263Q83 210 217 236M0 285Q91 233 201 257M332 205Q425 233 520 216M317 227Q410 258 520 240M304 250Q422 283 520 266" fill="none" stroke="#b9c8a1" stroke-width="2" opacity=".6"/><path d="M428 166v-36m0 20c-14-1-19-12-19-12 16-3 19 12 19 12Zm0-9s0-15 16-17c0 0-1 14-16 17Z" fill="#325641" stroke="#325641" stroke-width="2"/><circle cx="382" cy="152" r="5" fill="#f6f5e3"/><circle cx="382" cy="152" r="13" fill="none" stroke="#f6f5e3" stroke-opacity=".5"/><path d="M382 139V118h54" stroke="#f6f5e3" fill="none" stroke-dasharray="3 4"/></g></svg><div class="land-label"><span>ثلاث بيئات. قرار يناسب أرضك.</span><strong>المفرق · الأغوار · إربد</strong></div></div>
+</section>
+<section id="wizardView" class="app-layout" aria-label="معالج التخطيط الزراعي">
+  <form id="farmForm" class="panel wizard" novalidate>
+    <div class="stepper" aria-label="خطوات إدخال بيانات المزرعة"><button type="button" class="step-tab active" data-step="0" aria-current="step"><span class="step-number">١</span>أرضك ومنطقتك</button><button type="button" class="step-tab" data-step="1"><span class="step-number">٢</span>محاصيلك وموسمك</button><button type="button" class="step-tab" data-step="2"><span class="step-number">٣</span>المياه والري</button></div>
+    <section class="form-step" data-panel="0"><p class="step-meta">الخطوة ١ من ٣</p><h2 class="step-heading" tabindex="-1">أول إشي… وين أرضك؟</h2><p class="step-intro">كل منطقة إلها مناخها. اختار الأقرب لأرضك لنبدأ من المكان الصح.</p>
+      <div class="region-grid" role="radiogroup" aria-label="منطقة المزرعة">
+        <label class="region"><input type="radio" name="region" value="mafraq" checked><svg class="icon"><use href="#i-sun"/></svg><strong>المفرق</strong><span>بادية وسهول شرقية<br>جافة، وشتاء بارد</span></label>
+        <label class="region"><input type="radio" name="region" value="valley"><svg class="icon"><use href="#i-field"/></svg><strong>الأغوار الوسطى</strong><span>أرض غورية دافئة<br>تحت سطح البحر</span></label>
+        <label class="region"><input type="radio" name="region" value="irbid"><svg class="icon"><use href="#i-mountain"/></svg><strong>إربد</strong><span>سهول ومرتفعات شمالية<br>مناخ متوسطي</span></label>
+      </div>
+      <div class="field field-row"><div><label for="area">كم دونم مساحتها؟</label><p class="field-hint">الدونم الأردني = ١٬٠٠٠ متر مربع</p></div><div class="input-shell"><input id="area" name="area" type="number" value="10" min="0.1" max="100000" step="0.1" required inputmode="decimal"><span class="suffix">دونم</span></div></div>
+    </section>
+    <section class="form-step" data-panel="1" hidden><p class="step-meta">الخطوة ٢ من ٣</p><h2 class="step-heading" tabindex="-1">كل موسم بيحضّر للي بعده.</h2><p class="step-intro">احكيلنا عن المحصول السابق وخطتك الجديدة، حتى نراجع أثر الدورة على التربة.</p>
+      <div class="two-cols"><div class="field" style="margin-top:0"><label for="previous">شو زرعت الموسم الماضي؟</label><select id="previous"><option value="tomato">بندورة</option><option value="potato">بطاطا</option><option value="wheat">قمح</option><option value="onion">بصل</option><option value="fallow">الأرض كانت فارغة / بور</option></select></div><div class="field" style="margin-top:0"><label for="planned">شو ناوي تزرع هالموسم؟</label><select id="planned"><option value="potato">بطاطا</option><option value="tomato">بندورة</option><option value="chickpea">حمص</option><option value="fava">فول</option><option value="barley">شعير</option><option value="wheat">قمح</option></select></div></div>
+      <div class="field"><label for="season">فترة الموسم الزراعي</label><select id="season"><option value="winter">شتوي / ربيعي — تشرين الثاني إلى نيسان</option><option value="summer">ربيعي / صيفي — آذار إلى آب</option></select><p class="field-hint">نموذج لستة أشهر؛ توقيت الزراعة الفعلي يختلف حسب الصنف والارتفاع.</p></div>
+      <div class="field"><label for="surface">حالة سطح الأرض حالياً</label><select id="surface"><option value="bare">محروثة ومكشوفة</option><option value="residue">مغطاة ببقايا المحصول السابق / قش</option><option value="partial">مغطاة جزئياً</option></select></div>
+    </section>
+    <section class="form-step" data-panel="2" hidden><p class="step-meta">الخطوة ٣ من ٣</p><h2 class="step-heading" tabindex="-1">خلّينا نحسبها على قدّ ميّك.</h2><p class="step-intro">أدخل مياه الري المتاحة للموسم كاملًا. نضيف المطر الفعّال ونحسب فاقد طريقة الري.</p>
+      <div class="field" style="margin-top:0"><label for="irrigation">كيف بتسقي أرضك؟</label><select id="irrigation"><option value="drip">تنقيط — كفاءة 90%</option><option value="sprinkler">رشاشات — كفاءة 75%</option><option value="surface">ري سطحي / أحواض وخطوط — كفاءة 60%</option><option value="rainfed">زراعة بعلية — على المطر فقط</option></select></div>
+      <fieldset id="waterFields" style="border:0;padding:0;margin:21px 0 0"><legend class="field-label">قديش بتقدر توفر مي طول الموسم؟</legend><div class="segmented" aria-label="طريقة إدخال كمية المياه"><button type="button" data-water-mode="direct" aria-pressed="true">إدخال بالمتر المكعب</button><button type="button" data-water-mode="tank" aria-pressed="false">حاسبة الصهاريج</button></div>
+      <div id="directWater" class="field"><label for="water" class="sr-only">مياه الري بالمتر المكعب</label><div class="input-shell"><input id="water" type="number" min="0" max="100000000" step="0.1" value="1000" inputmode="decimal" required><span class="suffix">م³</span></div></div>
+      <div id="tankWater" class="two-cols" hidden><div class="field"><label for="tankCount">عدد الصهاريج</label><input id="tankCount" type="number" min="0" max="1000000" step="1" value="100" inputmode="numeric"></div><div class="field"><label for="tankCapacity">سعة الصهريج (م³)</label><input id="tankCapacity" type="number" min="0.1" max="1000" step="0.1" value="10" inputmode="decimal"></div></div>
+      </fieldset><div class="water-result" id="waterTotal" aria-live="polite">إجمالي مياه الري: 1,000 م³</div>
+    </section>
+    <p id="formError" class="form-error" role="alert" hidden></p>
+    <div class="wizard-actions"><button id="nextBtn" class="btn primary" type="button">التالي: محاصيلك وموسمك <svg class="icon"><use href="#i-arrow"/></svg></button><button id="backBtn" class="btn ghost" type="button" hidden>رجوع</button><span id="stepTime" class="muted small">دقيقتين… وخطتك جاهزة</span></div>
+  </form>
+  <aside class="form-aside"><div class="panel side-note"><div class="note-icon"><svg class="icon"><use href="#i-leaf"/></svg></div><h3>ملامح خطتك</h3><div id="farmPreview"></div><p class="side-foot">بنقارن خطتك مع بديل بقولي يصلح التربة، وبديل من الحبوب أقل احتياجًا للمياه.</p></div><div class="micro-card"><svg class="icon"><use href="#i-satellite"/></svg><strong>نظرة من الفضاء. قرار من الأرض.</strong><p>قراءات مناخية إقليمية تساعدك بالتخطيط، وتكتمل بمعرفتك بأرضك وفحص التربة.</p></div></aside>
+</section>
+<section id="dashboard" hidden aria-label="التحليل الزراعي">
+  <div class="section-head"><div><p class="section-kicker">خطتك الزراعية / SEASON PLANNER</p><h2 id="reportTitle" tabindex="-1">صورة أوضح للموسم القادم</h2><p id="reportMeta" class="report-meta"></p></div><div class="flex gap-2 no-print"><button class="btn" id="editTop"><svg class="icon"><use href="#i-edit"/></svg>تعديل إجاباتي</button><button class="btn" id="printTop"><svg class="icon"><use href="#i-print"/></svg>طباعة</button></div></div>
+  <p class="print-only print-context" id="printContext"></p>
+  <div class="summary-strip" role="status" aria-live="polite" aria-atomic="true"><svg class="icon"><use href="#i-shield"/></svg><div><h3 id="smartSummary"></h3><p>الكفاية المائية وحدها لا تكفي: راجع توافق التربة، وتكرار العائلة، ومخاطر الصقيع والحر قبل اعتماد المحصول.</p></div></div>
+  <div id="dataNotice" class="data-note"></div>
+  <div id="metrics" class="metrics"></div>
+  <section class="dashboard-section" id="strategies"><div class="section-head"><div><p class="section-kicker">01 / الدورة الزراعية</p><h2>ثلاثة مسارات. أيّها يناسب أرضك؟</h2><p>المقارنة للمساحة والموسم نفسيهما، مع احتساب كفاءة الري.</p></div><span class="tag">الإطار الأخضر = أفضل توازن مشروط</span></div><div id="strategyCards" class="strategy-grid"></div><p id="rankingNote" class="compare-note"></p></section>
+  <section class="dashboard-section" id="weatherSection"><div class="section-head"><div><p class="section-kicker">02 / اختبر خطتك</p><h2>قبل ما يتغيّر الطقس… جرّب الاحتمالات.</h2><p>توقعات مستقلة للأسبوع القادم، ومحاكاة تساعدك تختبر مرونة الخطة.</p></div><button id="resetSim" class="btn small-btn no-print">إلغاء المحاكاة</button></div><div class="sim-layout"><div class="panel forecast-panel"><div class="subhead"><h3>الأيام السبعة القادمة</h3><span id="weatherSource" class="tag"></span></div><div id="forecastDays" class="forecast-days"></div><div id="weatherRange" class="weather-range"></div><div id="weatherAlerts"></div></div><div class="panel sim-panel"><div class="subhead"><h3>ماذا لو…؟</h3><span class="small muted">محاكاة فقط</span></div><div class="sim-buttons">
+      <button class="sim-button" id="simRain" data-sim="rain" aria-pressed="false"><span class="flex items-center gap-3"><svg class="icon"><use href="#i-cloud"/></svg>قلّ المطر 20% هذا الموسم</span><span class="switch" aria-hidden="true"></span></button>
+      <button class="sim-button" id="simDrip" data-sim="drip" aria-pressed="false"><span class="flex items-center gap-3"><svg class="icon"><use href="#i-drop"/></svg><span id="dripLabel">التحول للتنقيط · كفاءة 90%</span></span><span class="switch" aria-hidden="true"></span></button>
+      <button class="sim-button weather" id="simFrost" data-sim="frost" aria-pressed="false"><span class="flex items-center gap-3"><svg class="icon"><use href="#i-snow"/></svg>صقيع إشعاعي الليلة · ‎−2°C وجو جاف</span><span class="switch" aria-hidden="true"></span></button>
+      <button class="sim-button weather" id="simHeat" data-sim="heat" aria-pressed="false"><span class="flex items-center gap-3"><svg class="icon"><use href="#i-sun"/></svg>حر ورياح شرقية · 38°C ورياح نشطة</span><span class="switch" aria-hidden="true"></span></button>
+    </div><p class="sim-explainer">المطر والتنقيط يغيّران ميزانية المياه. الصقيع والحر سيناريوهان بديلان يغيّران شارات الخطر والإرشادات، ولا يغيّران التوقع الأصلي.</p><div id="simSummary" class="sim-summary" role="status" aria-live="polite"></div></div></div></section>
+  <section class="dashboard-section" id="calendarSection"><div class="section-head"><div><p class="section-kicker">03 / تقويم الموسم</p><h2>متى ينمو محصولك، ومتى يحتاج حماية؟</h2><p>مراحل توضيحية تبدأ من أول شهر مختار، وليست مواعيد زراعة معتمدة لكل صنف.</p></div></div><div class="table-scroll" tabindex="0" role="region" aria-label="التقويم الزراعي، قابل للتمرير أفقيًا"><table class="timeline" id="timelineTable"></table></div><div class="legend"><span><i></i>نمو خضري</span><span><i class="flower"></i>إزهار / مرحلة حساسة</span><span><i class="bare"></i>سطح مكشوف معرض للرياح</span><span>الغطاء الحالي محفوظ في خلايا الانكشاف؛ بقاؤه بعد الحصاد افتراض يحتاج متابعة.</span></div></section>
+  <section class="dashboard-section" id="shieldsSection"><div class="section-head"><div><p class="section-kicker">04 / درع الحماية</p><h2>حماية المحصول تبدأ من التفاصيل.</h2><p>إرشادات تتغير مع غطاء الأرض، وطريقة الري، والبيانات، والمحاكاة.</p></div></div><div id="shieldCards" class="shield-grid"></div></section>
+  <section class="dashboard-section" id="dataSection"><div class="section-head"><div><p class="section-kicker">05 / البيانات كما هي</p><h2>مناخ منطقتك، شهرًا بشهر.</h2><p id="nasaMeta"></p></div><button class="btn small-btn no-print" id="refreshData">تحديث الاتصال</button></div><div class="table-scroll" tabindex="0" role="region" aria-label="بيانات NASA الشهرية، قابل للتمرير أفقيًا"><table id="nasaTable" class="params-table"></table></div><p class="table-note">الصفوف المظللة تخص الموسم المختار. القيم الأصلية لا تتغير بالمحاكاة. مؤشرا GWETTOP وGWETROOT بلا وحدة (0–1)، وليسا نسبة مئوية لحجم ماء التربة.</p></section>
+</section>
+<section id="aboutMethod" class="panel science" style="margin-bottom:28px"><div class="flex items-center gap-3"><svg class="icon"><use href="#i-info"/></svg><h3>حساب واضح. وحدود علمية واضحة.</h3></div><div id="calculationDetails" class="equations" hidden></div><div class="science-copy mt-3">
+  <p><strong>المياه:</strong> الصافي = مياه الري × الكفاءة. المطر الفعّال = مجموع المطر الشهري بالملم × المساحة بالدونم × 0.5. كل 1 ملم على 1 دونم أردني يعادل 1 م³. نحول PRECTOTCORR من ملم/يوم إلى ملم/شهر بعدد أيام الشهر المناخي (شباط 28.25 يومًا). التغطية = المياه المتاحة ÷ احتياج المحصول × 100. لا تُضاف أمطار توقعات الأسبوع إلى المجموع الموسمي تفاديًا للعد المزدوج.</p>
+  <p><strong>مصادر مختلفة، أدوار مختلفة:</strong> NASA POWER يوفر مناخًا تاريخيًا وشبكيًا ومؤشرات رطوبة تربة من إعادة التحليل. Open-Meteo يوفر توقعات تشغيلية متغيرة للأيام السبعة؛ <strong>ERA5 إعادة تحليل تاريخية، وليست مصدرًا لتوقع المستقبل</strong>. GWETTOP مؤشر نموذجي بديل إرشادي عند غياب قياس ميداني؛ ليس قياس SMAP مباشرًا ولا بديلًا مكافئًا له. FAO GAEZ وSMAP وMODIS/ECOSTRESS مراجع علمية هنا؛ لا نسحب منها بيانات فعلية.</p>
+  <p><strong>حدود الدقة:</strong> شبكة NASA أوسع من الحقل وقد تخلط بين ارتفاعات مختلفة، خصوصًا في الأغوار. قيم T2M_MIN وT2M_MAX المناخية الشهرية ليست توقعًا لليلة المقبلة، ولا تصف عدد ساعات التعرض. راقب محطة محلية وحرارة النبات. مؤشر جفاف السطح &lt; 0.30، والرياح النشطة ≥ 30 كم/ساعة، وحدود الحرارة هي قواعد فرز مبسطة وليست إنذارًا رسميًا.</p>
+  <p><strong>معايير المحاصيل:</strong> الاحتياجات الموسمية المثبتة هنا: البطاطا 500، البندورة 600، الحمص 250، الفول 280، الشعير 180، القمح 250 م³/دونم. هذه افتراضات المشروع للتخطيط ضمن نطاقات الاحتياج الزراعي، وليست قيمًا ثابتة تضمنها FAO لكل موقع. لا يحسب النموذج ETo أو Kc أو الملوحة أو عمق التربة؛ «أثر الدورة» لا يعادل فحص توافق التربة. تثبيت +50 كغ نيتروجين/هكتار تقدير مشروط بنجاح العقد الجذرية وإدارة البقايا، لا رصيد سماد مضمون.</p>
+  <p><strong>الاحتياط والمحاكاة:</strong> النسخ المناخية المضمنة جُلبت من NASA POWER بتاريخ 14 تشرين الثاني 2026 للفترة التي يحددها الرد. عند فشل التوقع تُستخدم أمثلة موسمية اصطناعية معلّمة بوضوح، ولا تُطلق بوصفها تحذيرات حية. المحاكاة الحرارية لا تزيد الاحتياج المائي حسابيًا لعدم وجود نموذج تبخر ونتح يومي. مراحل التقويم افتراضية ولا تغني عن توصية المرشد الزراعي.</p>
+  <p><strong>إرشاد الوقاية:</strong> رطوبة السطح ودمكه المعتدل قبل الصقيع قد يساعدان تخزين الحرارة، وقد يظهر فرق بضع درجات (نحو 2–3°C في ظروف معينة)، دون ضمان حماية. الري الصباحي أفضل لتقليل فاقد التبخر؛ قطرات الماء على الأوراق ليست سببًا عامًا مثبتًا لحرق الشمس. لا يُنصح بتجربة الرش للحماية من التجمد دون نظام مصمم وإشراف مختص.</p>
+  <div class="source-links"><a href="https://power.larc.nasa.gov/docs/methodology/data/sources_hydrology/" target="_blank" rel="noopener noreferrer">NASA POWER · الوحدات والمصادر</a><a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener noreferrer">Open-Meteo · التوقعات وCC BY 4.0</a><a href="https://open-meteo.com/en/docs/historical-weather-api" target="_blank" rel="noopener noreferrer">ERA5 · إعادة التحليل</a><a href="https://www.fao.org/4/y7223e/y7223e0c.htm" target="_blank" rel="noopener noreferrer">FAO · إدارة الصقيع</a><a href="https://www.fao.org/land-water/databases-and-software/crop-information/en/" target="_blank" rel="noopener noreferrer">FAO · احتياجات المحاصيل</a><a href="https://gaez.fao.org/" target="_blank" rel="noopener noreferrer">FAO GAEZ</a><a href="https://smap.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer">SMAP</a><a href="https://modis.gsfc.nasa.gov/" target="_blank" rel="noopener noreferrer">MODIS</a><a href="https://ecostress.jpl.nasa.gov/" target="_blank" rel="noopener noreferrer">ECOSTRESS</a><a href="https://extension.psu.edu/garden-myths-watering" target="_blank" rel="noopener noreferrer">Penn State · الري واللفحة</a></div>
+</div></section>
+<div id="bottomActions" class="report-actions" hidden><button id="editBottom" class="btn"><svg class="icon"><use href="#i-edit"/></svg>تعديل إجاباتي</button><button id="printBottom" class="btn primary"><svg class="icon"><use href="#i-print"/></svg>طباعة التقرير الزراعي</button></div>
+</main>
+<footer class="footer"><span>درع المزارع — مخطط الدورة الزراعية والمناخ الذكي</span><span>مشروع لتحدي NASA Space Apps · الأردن <span aria-hidden="true">↗</span></span><span>أرضك أمانة. والمعلومة أول الحماية.</span></footer>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<noscript><p style="padding:20px;background:#fff0da">يرجى تفعيل JavaScript لتشغيل المخطط التفاعلي. جميع البيانات الاحتياطية والخطوط والتصميم مضمنة في هذا الملف.</p></noscript>
+<script>
+/*__APP_JS__*/</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 51,
+      "sha256": "dc26469e00e77bd2ea60689bc855562c326e05e9c904c6f963ca0d1ab69664f4"
+    },
+    {
+      "path": ".openai/hosting.json",
+      "bytes": 106,
+      "sha256": "009c4289e86b64c0b637a7848f5ff7122f49af125a7c1bb1d520889db869c11e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5472,
+      "sha256": "d3a2902b1b8a1e3b2b67a902c1937fdfd6c020bd0dfcfcc225d4338fddd1c51e"
+    },
+    {
+      "path": "assets/fonts/NotoSansArabic-Bold.ttf",
+      "bytes": 192348,
+      "sha256": "195e8d8e1e723630e46c1d19fe7ec118a73e5825baa198737d6a96df8c4063b1"
+    },
+    {
+      "path": "assets/fonts/NotoSansArabic-Regular.ttf",
+      "bytes": 192144,
+      "sha256": "146b2193f4aee343a8da5e2295255b04db547d74339a12be51763b3a0081868d"
+    },
+    {
+      "path": "assets/tailwind.css",
+      "bytes": 2934019,
+      "sha256": "b6ad97402eddb903e7a5d7a73ee47a679204efbdda4521a391cbad9df509b932"
+    },
+    {
+      "path": "build.py",
+      "bytes": 2133,
+      "sha256": "1fdb453419db6257bd596a9dad202fcae3b4ae5f9a9026e7080166720ec499cb"
+    },
+    {
+      "path": "data/nasa-irbid.json",
+      "bytes": 2460,
+      "sha256": "e4cdde9bfd67646af0e89991b054561fd4a5603b4961c4aadfeae189ce782014"
+    },
+    {
+      "path": "data/nasa-mafraq.json",
+      "bytes": 2465,
+      "sha256": "d4c1edbead27c3fcd133224c672e3d624b7888dafac87bdba834e9da262804e9"
+    },
+    {
+      "path": "data/nasa-valley.json",
+      "bytes": 2459,
+      "sha256": "474ab34365f2705ba3ef23f601de04501399766489cc751a318dfc2d2612a890"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 621470,
+      "sha256": "0ee87547199220e75c0b473350f6b5bf7972e3ea0d0af74e312c1b5940b7921d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 621470,
+      "sha256": "0ee87547199220e75c0b473350f6b5bf7972e3ea0d0af74e312c1b5940b7921d"
+    },
+    {
+      "path": "licenses/Noto-Sans-Arabic-OFL.txt",
+      "bytes": 4382,
+      "sha256": "07fc70bfeb985cc1a87a8587d0a0c80bab11c86c9dc3fd95b6f0cb332f983e96"
+    },
+    {
+      "path": "licenses/Tailwind-MIT.txt",
+      "bytes": 1140,
+      "sha256": "9e3e31668eee20e6583fa578f3b3cea76a94dbd80bf93043f98c123136b25907"
+    },
+    {
+      "path": "package.json",
+      "bytes": 365,
+      "sha256": "749b1a3df2be0842e9f90ffcd0d47bfa95cebbf219639c585a2efc95fa5f3fdf"
+    },
+    {
+      "path": "src/app.js",
+      "bytes": 45945,
+      "sha256": "11065f7292e1ff2419ef7c32985c10029860599aefa60179552bed386e42ad1a"
+    },
+    {
+      "path": "src/index.template.html",
+      "bytes": 27024,
+      "sha256": "859297ddef6b8fd61335448c4ba639d71ff0245fc38cc473b66a5a4bf9ce1ef1"
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 27893,
+      "sha256": "bf31200f7dd2fb7220c6f1b4b1a8d7e6489d97028d48e9fcd7253b2d1ff65164"
+    },
+    {
+      "path": "tests/fixtures/open-meteo-2026-11-14.json",
+      "bytes": 666,
+      "sha256": "bd794302341cfe65fd78485f9dc0f9906fdc3df5a5b264808c8e596ff1796d8c"
+    },
+    {
+      "path": "tests/results/validation-2026-11-14.json",
+      "bytes": 1706,
+      "sha256": "89f4a193b0bea3d33fcf9623c7df126ed12d63b77a92ab1ba56a613c96953dda"
+    },
+    {
+      "path": "tests/test-app.cjs",
+      "bytes": 11846,
+      "sha256": "0a48f25215b506f0db7d4d8b7b7fb76320eb48e6d1952449842cbf840980cb77"
+    }
+  ]
+}
